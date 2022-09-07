@@ -16,5 +16,10 @@ impl ListNode {
 }
 
 pub fn middle_node(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-    None
+    let (mut slow, mut fast) = (&head, &head);
+    while fast.as_ref().is_some() && fast.as_ref().unwrap().next.is_some() {
+        slow = &slow.as_ref().unwrap().next;
+        fast = &(fast.as_ref().unwrap().next.as_ref().unwrap().next);
+    }
+    slow.clone()
 }
