@@ -13,7 +13,8 @@ pub fn can_construct(ransom_note: String, magazine: String) -> bool {
 
     for v in magazine.as_bytes().iter() {
         // 此处将解引用的值转移到vv, vv已经是新的值了，即使进行操作也仅仅只针对这里的vv
-        // let mut vv = *cut.entry(*v).or_insert(0);
+        // let mut vv = *cut.entry(*v]
+        // c x.or_insert(0);
         // vv = vv + 1;
 
         // 并为赋值新变量，可行
